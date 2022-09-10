@@ -1,6 +1,6 @@
 function a=FINDQRAVAL(A, tol, max_iter)
   if (nargin==1)
-    tol=1e-6; max_iter =10000;
+     tol=1e-6; max_iter =10000;
   endif
   err=inf;
   k=0;
@@ -17,6 +17,6 @@ function a=FINDQRAVAL(A, tol, max_iter)
     disp('No converge');
   else
     a=diag(A);
-    fprintf('Número de iteraciones=%d \n',k-1)
+    fprintf('Número de iteraciones=%d \n' ,k-1)
   endif
 endfunction
