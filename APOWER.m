@@ -11,7 +11,7 @@
 % 2) el autovalor dominante lambda
 % 3) la cantidad de itereraciones
 
-function [v, lambda, niter] = apower(A, v0, tol, max_iter)
+function [v, lambda, niter] = APOWER(A, v0, tol, max_iter)
   k=0;
   v_old=v0/norm(v0);
   lambda_old=v_old'*A*v_old;

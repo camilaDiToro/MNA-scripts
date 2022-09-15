@@ -1,3 +1,16 @@
+% Metodo de las potencias aplicado a matrices inversas
+%
+% Dado: 
+% 1) matriz A 
+% 2) matriz seed v0
+% 3) una tolerancia (tol=1e-10)
+% 4) una cantidad maxima de iteraciones (max_iter=1000)
+%
+% Retorna:
+% 1) el autovector v correspondiente al lambda
+% 2) el autovalor dominante lambda
+% 3) la cantidad de itereraciones
+
 function [v, lambda, niter] = ISPOWER(A, v0, s, tol, max_iter)
   k = 0;
   [m n]=size(A);
