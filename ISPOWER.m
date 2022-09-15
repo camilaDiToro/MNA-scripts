@@ -8,7 +8,7 @@
 %
 % Retorna:
 % 1) el autovector v correspondiente al lambda
-% 2) el autovalor dominante lambda
+% 2) el autovalor mas chico lambda
 % 3) la cantidad de itereraciones
 
 function [v, lambda, niter] = ISPOWER(A, v0, s, tol, max_iter)
