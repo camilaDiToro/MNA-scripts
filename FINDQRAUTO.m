@@ -3,7 +3,7 @@ function B = FINDQRAUTO (A, tol, max_iter)
     B=zeros(size(A));
     for i =1:n
         s=A(i,i);
-        [v, lambda, niter] = APOWER(A, ones(n,1), s, tol, max_iter);
+        [v, lambda, niter] = ISPOWER(A, ones(n,1), s, tol, max_iter);
         B(:,i)=v;
     endfor
 endfunction
