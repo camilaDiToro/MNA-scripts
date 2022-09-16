@@ -1,3 +1,8 @@
+% Resolver sistema de ecuaciones.
+% Tambien se puede usar linsolve(A, b)
+% Y se puede usar Gauss-Jordan con rref([A b])
+
+1;
 function [A, x]= EGPP (A, b)
 		[m,n] = size(A); flgsol=false;
 		if (nargin==2)
@@ -6,8 +11,7 @@ function [A, x]= EGPP (A, b)
 						x = zeros(m,1);
 				bb=b;
 				else
-						printf(’Sistema con multiples soluciones, no está pensada esta
-						función\n’)
+						printf("Sistema con multiples soluciones, no esta pensada esta funcion\n")
 						x = zeros(n,1);bb=zeros(m,1);
 				endif
 		else
@@ -43,3 +47,7 @@ function [A, x]= EGPP (A, b)
 				endfor
 		endif
 endfunction
+
+A=[2 1 3; -4 -1 0; 6 -2 -1]
+b=[6; -7; 13];
+[B,x]=EGPP(A,b)
