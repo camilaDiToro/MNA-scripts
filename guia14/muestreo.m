@@ -6,6 +6,7 @@ clear all, close all, clf
 
 format rat
 
+%           GRAFICO DEL ESPECTRO DE f(x)
 % f: puntero a la funcion continua a ser muestreada
 % F: puntereo a la transformada continua de fourier
 % Ts: periodo de sample (ie, cada cuanto tomo una muestra)
@@ -23,11 +24,11 @@ function Fk = graph_fft(f, F, Ts, interval_left, interval_right, number_of_graph
    Fk = fft(xn);                                    % Obtengo la Transformada rapida (discreta) de fourier
    
    % Dibujamos la Transformada Rapida (Discreta) de Furier
-   Ak = Fk;                 % ! Formula del espectro de amplitud
+   Ak = Fk;                 % ! Formula del espectro de amplitud (Las frecuencias por arriba de fN son cero!)
    Ak = abs(Ak)/N;          % !             !
    Ak(2:fN) = 2 * Ak(2:fN); % !             !
 
-   f = (1:fN + 1) * fs / N;
+   f = (1:fN + 1) * fs / N; % Paso la frecuencia de sampleo en espacio tiempo a espacio en frecuencias
   
    subplot(number_of_graphs, 1, i);
    hold on                               
@@ -51,6 +52,7 @@ function y = f(t)
 endfunction  
 
 % Coloco el valor absoluto de transformada continua de f(t) calculada en papel
+% Solo para comparar! Es OPCIONAL calcularlo!
 function y = F(omega)
    y = abs(1./(1 + i*omega))
 endfunction

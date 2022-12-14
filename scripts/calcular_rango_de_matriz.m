@@ -16,4 +16,4 @@ A = [1 1 1 1 1; 0 0 0 0 0; -1 -1 -1 -1 -1; 0 0 0 0 0; 1 1 1 1 1; -1 -1 -1 -1 -1;
 %         0        0        0        0        0
 %         0        0        0        0        0
 
-% Luego nos damos cuenta que dim(S) = 2 => dim(A) = 2
+% Luego nos damos cuenta que dim(S) = 1 => dim(A) = 1

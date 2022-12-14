@@ -24,4 +24,4 @@ eig(M) % vemos que no podemos usar M ya que devuelve numeros complejos
 [U S V] = svd(M)   
 
 % 3) Multiplicamos los elementos de la matriz diagonal
-d = PRODDIAGONAL(S)
+d = PRODDIAGONAL(S) # si nos dejan, podemos usar prod(svd(M))
