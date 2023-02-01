@@ -1,0 +1,13 @@
+aux = dlmread("trees.dat");
+X=aux(:,1);
+lnx=[log(X)];
+Y=aux(:,2);
+lny=[log(Y)];
+A=[ones(size(lnx)) lnx];
+p=pinv(A) * lny;
+gx = min(X):0.5:max(X);
+gy = [exp(p(1)) * gx.^(p(2))];
+hold on;
+plot(X,Y,'o');
+plot(gx, gy);
+hold off;
